@@ -1,0 +1,2903 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="images/favicon.ico" rel="icon" type="image/ico" />
+    <title>Just2Trade API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;cpp--mql&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">cURL</a>
+              <a href="#" data-language-name="cpp--mql">MQL5</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-username" class="toc-h2 toc-link" data-title="Authentication">Create username</a>
+                  </li>
+                  <li>
+                    <a href="#password-flow" class="toc-h2 toc-link" data-title="Authentication">Password Flow</a>
+                  </li>
+                  <li>
+                    <a href="#code-flow-authorize" class="toc-h2 toc-link" data-title="Authentication">Code Flow - Authorize</a>
+                  </li>
+                  <li>
+                    <a href="#code-flow-access-token" class="toc-h2 toc-link" data-title="Authentication">Code Flow - Access token</a>
+                  </li>
+                  <li>
+                    <a href="#user-profile" class="toc-h2 toc-link" data-title="Authentication">User profile</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#application" class="toc-h1 toc-link" data-title="Application">Application</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#apply-for-new-account" class="toc-h2 toc-link" data-title="Application">Apply for new account</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#accounts" class="toc-h1 toc-link" data-title="Accounts">Accounts</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#em-streaming-feed-not-live-yet-em" class="toc-h2 toc-link" data-title="Accounts"><em>Streaming feed - not live yet</em></a>
+                  </li>
+                  <li>
+                    <a href="#get-accounts-balances" class="toc-h2 toc-link" data-title="Accounts">Get accounts balances</a>
+                  </li>
+                  <li>
+                    <a href="#get-account-positions" class="toc-h2 toc-link" data-title="Accounts">Get account positions</a>
+                  </li>
+                  <li>
+                    <a href="#get-account-trades" class="toc-h2 toc-link" data-title="Accounts">Get account trades</a>
+                  </li>
+                  <li>
+                    <a href="#em-get-account-holder-info-not-live-yet-em" class="toc-h2 toc-link" data-title="Accounts"><em>Get account holder info - not live yet</em></a>
+                  </li>
+                  <li>
+                    <a href="#transactions-journal" class="toc-h2 toc-link" data-title="Accounts">Transactions journal</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#trading" class="toc-h1 toc-link" data-title="Trading">Trading</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#validate-an-order" class="toc-h2 toc-link" data-title="Trading">Validate an order</a>
+                  </li>
+                  <li>
+                    <a href="#place-an-order" class="toc-h2 toc-link" data-title="Trading">Place an order</a>
+                  </li>
+                  <li>
+                    <a href="#get-order-details" class="toc-h2 toc-link" data-title="Trading">Get order details</a>
+                  </li>
+                  <li>
+                    <a href="#get-active-orders" class="toc-h2 toc-link" data-title="Trading">Get active orders</a>
+                  </li>
+                  <li>
+                    <a href="#cancel-an-order" class="toc-h2 toc-link" data-title="Trading">Cancel an order</a>
+                  </li>
+                  <li>
+                    <a href="#em-estimate-fee-charges-not-live-yet-em" class="toc-h2 toc-link" data-title="Trading"><em>Estimate fee charges - not live yet</em></a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#market-data" class="toc-h1 toc-link" data-title="Market data">Market data</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#streaming-feed" class="toc-h2 toc-link" data-title="Market data">Streaming feed</a>
+                  </li>
+                  <li>
+                    <a href="#get-current-quote" class="toc-h2 toc-link" data-title="Market data">Get current quote</a>
+                  </li>
+                  <li>
+                    <a href="#get-current-quotes-array" class="toc-h2 toc-link" data-title="Market data">Get current quotes array</a>
+                  </li>
+                  <li>
+                    <a href="#get-quotes-history" class="toc-h2 toc-link" data-title="Market data">Get quotes history</a>
+                  </li>
+                  <li>
+                    <a href="#em-get-trading-schedule-not-live-yet-em" class="toc-h2 toc-link" data-title="Market data"><em>Get trading schedule - not live yet</em></a>
+                  </li>
+                  <li>
+                    <a href="#lookup-securities" class="toc-h2 toc-link" data-title="Market data">Lookup securities</a>
+                  </li>
+                  <li>
+                    <a href="#em-get-time-and-sales-not-live-yet-em" class="toc-h2 toc-link" data-title="Market data"><em>Get time and sales - not live yet</em></a>
+                  </li>
+                  <li>
+                    <a href="#get-option-series" class="toc-h2 toc-link" data-title="Market data">Get option series</a>
+                  </li>
+                  <li>
+                    <a href="#get-option-expirations" class="toc-h2 toc-link" data-title="Market data">Get option expirations</a>
+                  </li>
+                  <li>
+                    <a href="#get-option-chain" class="toc-h2 toc-link" data-title="Market data">Get option chain</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-status-codes" class="toc-h2 toc-link" data-title="Errors">HTTP Status Codes</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#appendix" class="toc-h1 toc-link" data-title="Appendix">Appendix</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#cms-symbols" class="toc-h2 toc-link" data-title="Appendix">CMS symbols</a>
+                  </li>
+                  <li>
+                    <a href="#occ-symbols" class="toc-h2 toc-link" data-title="Appendix">OCC symbols</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://trading.just2trade.com'>J2T trading platform</a></li>
+            <li><a href='https://cabinet.just2trade.com'>J2T personal cabinet</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>We believe that modern financial mechanics is a problem of IT and code, not finance. We seek for elegance of integrations by eliminating the unnecessary complexity of financial infrastructure. Our API calls are based on REST concepts and can be made with any language that supports standard HTTP. Trading is made as easy as possible, just plain JSON and POST.</p>
+<h1 id='authentication'>Authentication</h1>
+<p>All requests are authenticated with tokens issued by common OAuth 2.0 compatible flow. In order to use the API, the application should be registered with us first to get the <code>client_id</code> and <code>client_secret</code>. Please contact us at support@just2trade.com in order to do that. We support two authorization flows suitable for different scenarios. The <code>password</code> type is short and simple to be used by users trading directly on their account. The <code>authorization_code</code> type is longer and more complicated but allows third parties to get authorized access to client accounts. For security reasons, the third party applications will need to add one or more callback urls to the whitelist on our side first.</p>
+
+<p>Successful authentication issues a security token that needs to be specified with every authenticated request in the Authentication HTTP header: <code>Authentication: Bearer {token goes here}</code></p>
+<h2 id='create-username'>Create username</h2>
+<p>A user must have an identity with Just2Trade in order to use Just2Trade services. The identity is authenticated by username and password created by this endpoint. This does not open a trading account.</p>
+<pre class="highlight shell tab-shell"><code>curl
+    -X POST
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Basic {auth}'</span>
+    --header <span class="s1">'Content-Type: application/json'</span>
+    -d <span class="s1">'{ \ 
+        "auth": "YXBwOm15X3NlY3JldA==", \ 
+        "email": "myemail@domain.com", \ 
+        "first_name": "John", \ 
+        "last_name": "Doe", \ 
+        "username": john.doe.login, \ 
+        "password": "passwordhere"
+        }'</span> <span class="s1">'https://auth.just2trade.com/api/register'</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>auth</td>
+<td>Required. This is base 64-encoded string of {client_id}:{client_secret}. For example, if client_id is <code>app</code> and client_secret is <code>my_secret</code> then the auth string is the base64-encoded <code>app:my_secret</code> which is <code>YXBwOm15X3NlY3JldA==</code></td>
+</tr>
+<tr>
+<td>email</td>
+<td>Required.</td>
+</tr>
+<tr>
+<td>first_name</td>
+<td>Required.</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>Required.</td>
+</tr>
+<tr>
+<td>username</td>
+<td>Required.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Required. Password complexity requirements are enforced</td>
+</tr>
+</tbody></table>
+
+<p>Returns HTTP 200 OK if the identity is successfully created, HTTP 400 Bad Request with human readable error message in case of any validation errors</p>
+<h2 id='password-flow'>Password Flow</h2>
+<p>Create an access token by logging in with a valid username and password. The access token is issued for 24 hours by default and prolonged with every method call. In the most common scenario this is the first method to be called at the application start. The POST parameters are:</p>
+<pre class="highlight shell tab-shell"><code>curl
+    -X POST
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span>
+    -d <span class="s1">'grant_type=password&amp;client_id={client_id}&amp;client_secret={your_client_secret}&amp;username={username}&amp;password={password}'</span>
+    <span class="s1">'https://auth.just2trade.com/connect/token'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email profile"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MjAwOTg1OWUtZTUwMy00YzY4LWEyZWQtODU0N2NkZTJiNDdlfDIwMTcxMDA3MTkyNDQzfHRlc3R8U2VyZ2V5fE1pbmtvdg=="</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">86400</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>grant_type</td>
+<td>Required. This is the OAuth authorization flow to use. <code>password</code> in this case.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>Required. The client id issued to the service</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>Required. The client secret issued to the service</td>
+</tr>
+<tr>
+<td>username</td>
+<td>Required with <code>password</code> grant type.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Required with <code>password</code> grant type.</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<table><thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>access_token</td>
+<td>the access token</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>the scopes this token grants access to</td>
+</tr>
+<tr>
+<td>token_type</td>
+<td><code>Bearer</code> means that the access token should be put to the Authorization header of every web request</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>the expiration lifetime in seconds</td>
+</tr>
+</tbody></table>
+<h2 id='code-flow-authorize'>Code Flow - Authorize</h2>
+<p>The user browser should be directed to the following authentication url. The user will see the Just2Trade login form to input the credentials.</p>
+<pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    <span class="s1">'https://auth.just2trade.com/connect/authorize?response_type=code&amp;client_id={{your_client_id}}&amp;redirect_uri={{your_redirect_uri}}'</span>
+</code></pre>
+<blockquote>
+<p>After successful authentication the user is redirected to redirect_uri with HTTP code 302 and the authorization code:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>    302 Found
+    Location: <span class="o">{{</span>your_redirect_uri<span class="o">}}</span>?code<span class="o">={{</span>code<span class="o">}}</span>
+</code></pre><h3 id='request'>Request</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>response_type</td>
+<td>Required. This is the OAuth authorization flow to use. In this case this is <code>code</code>.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>Required. The client id issued to the service</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>Required. The url to redirect the user after successful authentication. For security reasons, we do not allow just any url, we require this url to be registered first</td>
+</tr>
+</tbody></table>
+<h2 id='code-flow-access-token'>Code Flow - Access token</h2>
+<p>The next step is to exchange the authorization code to an access token which will be used to authenticate all API requests. By default the access token is issued for 24 hours and is prolonged with every usage.</p>
+<pre class="highlight shell tab-shell"><code>curl
+    -X POST
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span>
+    -d <span class="s1">'grant_type=authorization_code&amp;code={code}&amp;client_id={client_id}&amp;client_secret={your_client_secret}&amp;redirect_uri={your_redirect_uri}'</span>
+    <span class="s1">'https://auth.just2trade.com/connect/token'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email profile"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MjAwOTg1OWUtZTUwMy00YzY4LWEyZWQtODU0N2NkZTJiNDdlfDIwMTcxMDA3MTkyNDQzfHRlc3R8U2VyZ2V5fE1pbmtvdg=="</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">86400</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='request-2'>Request</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>grant_type</td>
+<td>Required. This is the OAuth authorization flow to use. <code>authorization_code</code> in this case.</td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>Required. The client id issued to the service</td>
+</tr>
+<tr>
+<td>client_secret</td>
+<td>Required. The client secret issued to the service</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Required with <code>authorization_code</code> grant type. The authorization code received at the previous step. Please note the authorization code lifetime is short (5 minutes) so please be sure to exchange the code to a token immediately.</td>
+</tr>
+<tr>
+<td>redirect_uri</td>
+<td>Required with <code>authorization_code</code> grant type. The same url as on the previous request authorization step.</td>
+</tr>
+</tbody></table>
+<h3 id='response-2'>Response</h3>
+<table><thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>access_token</td>
+<td>the access token</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>the scopes this token grants access to</td>
+</tr>
+<tr>
+<td>token_type</td>
+<td><code>Bearer</code> means that the access token should be put to the Authorization header of every web request</td>
+</tr>
+<tr>
+<td>expires_in</td>
+<td>the expiration lifetime in seconds</td>
+</tr>
+</tbody></table>
+<h2 id='user-profile'>User profile</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/userinfo'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8f1e7eba-0000-0000-0000-2b67c9af83a5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"login"</span><span class="p">:</span><span class="w"> </span><span class="s2">"login"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"first_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"last_name"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"login@email.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"domestic"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678@vision"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe Individual"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"trade_platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETNA"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11111111@cor"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe and Jane Doe Joint"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"trade_platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETNA"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"applications"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"process"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This retrieves the basic profile information including new accounts application status and the list of existing account numbers.</p>
+<h1 id='application'>Application</h1><h2 id='apply-for-new-account'>Apply for new account</h2><pre class="highlight shell tab-shell"><code>curl
+    -X POST
+    --header <span class="s1">'Content-Type: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    -d <span class="s1">'json goes here'</span> <span class="s1">'https://api.just2trade.com/application'</span>
+</code></pre>
+<blockquote>
+<p>Request example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"personal"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"middle_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"A"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"residential_address"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"One Penn Plaza suite 1614"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New York"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10119"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="s2">"mobile_phone_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mobile_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5551234567"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@email.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"marital_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"married"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"mothers_maiden_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Doe"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"date_of_birth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12/01/1985"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"ssn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111-22-3333"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"citizenship_country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"us_driving_license"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"75 123123"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"employment"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"employed"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"job_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Seaport Crane Operator"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Port Authority"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nature"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Logistics"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"company_years"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"employer_address"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"89 South Street"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"New York"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NY"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"zip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10038"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="w">           
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"financial"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"number_of_dependents"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"annual_income"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$75,000 - $199,999"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"net_worth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$150,000 - $499,999"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"liquid_net_worth"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$50,000 - $149,999"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"tax_bracket"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31 - 35%"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"funding_source"</span><span class="p">:</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"earnings"</span><span class="p">,</span><span class="w"> </span><span class="s2">"home_equity_line_of_credit"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"funding_source_other"</span><span class="p">:</span><span class="w"> </span><span class="s2">"line of credit"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"investment"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"knowledge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limited"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"risk_tolerance"</span><span class="p">:</span><span class="w"> </span><span class="s2">"moderate"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"liquidity_needs"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Important (1 - 5 Years)"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"objectives"</span><span class="p">:</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+            </span><span class="s2">"capital_appreciation"</span><span class="p">,</span><span class="w"> </span><span class="s2">"preservation_of_capital"</span><span class="p">,</span><span class="w"> </span><span class="s2">"income"</span><span class="p">,</span><span class="w"> </span><span class="s2">"speculation"</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"time_horizon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 to 5 Years"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"experience"</span><span class="p">:</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"stocks"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 to 5 Years"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"options"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 to 5 Years"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"short_sales"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 to 5 Years"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"mutual_funds"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 to 5 Years"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"margin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 to 5 Years"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"affiliations"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"employee_of_exchange"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"employee_of_brokerdealer"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"employee_of_regulator"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"employee_of_advisor"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"person_to_influence_securities"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"person_to_contribute_major_capital"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"senior_officer_of_financial_institution"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"senior_officer_of_public_company"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"director_of_public_company"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"major_shareholder_of_public_company"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"senior_officer_foreign"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"relationship_to_another_account"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"relationship_to_another_entity"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"legal_issues"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"bankruptcy"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"legal_dispute"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unpaid_balance"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lannisters always pay their debts"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"agreements"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"just2trade"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"vision"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"vision_margin"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nyse"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nasdaq"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"extended_hours"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"otc"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"documents"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"identity"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"scan.jpg"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">" -- --- -- - -- base64 content goes here - - -- - - -- "</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='request'>Request</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>personal</td>
+<td>Personal information section according to the structure described below</td>
+</tr>
+<tr>
+<td>employment</td>
+<td>Employment information section</td>
+</tr>
+<tr>
+<td>financial</td>
+<td>General financial information</td>
+</tr>
+<tr>
+<td>investment</td>
+<td>Investment experience questionnaire</td>
+</tr>
+<tr>
+<td>affiliatons</td>
+<td>Affiliations information required by law to prevent market manipulation. Set to true if you or any immediate family member (spouse, brother, sister, parent, child, mother-in-law, sister-in-law, brother-in-law, daugher-in-law, son-in-law), or other person who supports you or who you support to a material extent, or an additional account holder, is a person described here.</td>
+</tr>
+<tr>
+<td>legal_issues</td>
+<td>Legal issues background</td>
+</tr>
+<tr>
+<td>agreements</td>
+<td>Agreements and signatures. Set to true if the corresponding document is read and agreed to.</td>
+</tr>
+<tr>
+<td>documents</td>
+<td>Documents binaries encoded as base64</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Personal Information</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>first_name</td>
+<td>First name as stated on the ID document</td>
+</tr>
+<tr>
+<td>middle_name</td>
+<td>Middle name if applicable</td>
+</tr>
+<tr>
+<td>last_name</td>
+<td>Last name as stated on the ID document</td>
+</tr>
+<tr>
+<td>residential_address</td>
+<td>Permanent address in the format of the <strong>Address Structure</strong> described below</td>
+</tr>
+<tr>
+<td>mobile_phone_country</td>
+<td>Mobile phone country code, a mandatory plus sign and digits. For example, for US it is <code>+1</code></td>
+</tr>
+<tr>
+<td>mobile_phone</td>
+<td>Mobile Phone, digits only, no dashes or brackets</td>
+</tr>
+<tr>
+<td>email_address</td>
+<td>Email Address</td>
+</tr>
+<tr>
+<td>marital_status</td>
+<td>Marital status, one of the following: <code>single</code>, <code>married</code>, <code>divorced</code></td>
+</tr>
+<tr>
+<td>mothers_maiden_name</td>
+<td>Mother&#39;s maiden name to be used as a security question</td>
+</tr>
+<tr>
+<td>date_of_birth</td>
+<td>Date of birth, US format <code>mm/dd/yyyy</code></td>
+</tr>
+<tr>
+<td>ssn</td>
+<td>SSN or ITIN, required for US residents, digits only</td>
+</tr>
+<tr>
+<td>citizenship_country</td>
+<td>Country, two-symbol ISO code</td>
+</tr>
+<tr>
+<td>id_type</td>
+<td>The type of ID document, the following values are supported: <code>passport</code>, <code>us_state_id</code>, <code>us_driving_license</code>, <code>us_green_card</code></td>
+</tr>
+<tr>
+<td>id_number</td>
+<td>The number of ID document</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Employment</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>Employment status, one of the following values: <code>employed</code>, <code>self_employed</code>, <code>retired</code>, <code>not_employed</code>, <code>student</code></td>
+</tr>
+<tr>
+<td>job_title</td>
+<td>Job title</td>
+</tr>
+<tr>
+<td>company</td>
+<td>Company name</td>
+</tr>
+<tr>
+<td>company_years</td>
+<td>Years with this company</td>
+</tr>
+<tr>
+<td>nature</td>
+<td>Nature of the business</td>
+</tr>
+<tr>
+<td>employer_address</td>
+<td>The address in the format of the <strong>Address Structure</strong> described below</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Address</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>street</td>
+<td>Street address including apartment number if applicable</td>
+</tr>
+<tr>
+<td>city</td>
+<td>City</td>
+</tr>
+<tr>
+<td>state</td>
+<td>State, two-symbol ISO code, required for United States</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>Postal code</td>
+</tr>
+<tr>
+<td>country</td>
+<td>Country, two-symbol ISO code</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Financial</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>number_of_dependents</td>
+<td>A qualifying child or relative for whom you can claim a tax exemption, including yourself.</td>
+</tr>
+<tr>
+<td>annual_income</td>
+<td>Annual income, one of the following values <code>Under $25,000</code>, <code>$25,000 - $74,999</code>, <code>$75,000 - $199,999</code>, <code>$200,000 - $499,999</code>, <code>$500,000 - $999,999</code>, <code>$1,000,000+</code></td>
+</tr>
+<tr>
+<td>net_worth</td>
+<td>One of the following values <code>Under $50,000</code>, <code>$50,000 - $149,999</code>, <code>$150,000 - $499,999</code>, <code>$500,000 - $999,999</code>, <code>$1,000,000 - $4,999,999</code>, <code>Over $5,000,000</code></td>
+</tr>
+<tr>
+<td>liquid_net_worth</td>
+<td>One of the following values <code>Under $50,000</code>, <code>$50,000 - $149,999</code>, <code>$150,000 - $499,999</code>, <code>$500,000 - $999,999</code>, <code>$1,000,000 - $4,999,999</code>, <code>Over $5,000,000</code></td>
+</tr>
+<tr>
+<td>tax_bracket</td>
+<td>One of the following values <code>0 - 15%</code>, <code>16 - 25%</code>, <code>26 - 30%</code>, <code>31 - 35%</code>, <code>Over 35%</code></td>
+</tr>
+<tr>
+<td>funding_source</td>
+<td>An array with the following available values <code>earnings</code>, <code>pension</code>, <code>gift</code>, <code>sale_of_business_or_property</code>, <code>insurance</code>, <code>inhertiance</code>, <code>social_security_benefits</code>, <code>home_equity_line_of_credit</code>, <code>other</code></td>
+</tr>
+<tr>
+<td>funding_source_other</td>
+<td>Please explain if any other funding sources</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Investment</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>objectives</td>
+<td>An array with all the following 4 values ordered by priority: <code>capital_appreciation</code>, <code>preservation_of_capital</code>, <code>income</code>, <code>speculation</code></td>
+</tr>
+<tr>
+<td>risk_tolerance</td>
+<td>One of the following values <code>low</code>, <code>moderate</code>, <code>aggressive</code>, <code>speculative</code></td>
+</tr>
+<tr>
+<td>liquidity_needs</td>
+<td>One of the following values <code>Very Important (Less Than 1 Year)</code>, <code>Important (1 - 5 Years)</code>, <code>Somewhat Important (5 - 15 Years)</code>, <code>Does Not Matter (Over 15 Years)</code></td>
+</tr>
+<tr>
+<td>time_horizon</td>
+<td>One of the following values <code>Less than 1 Year</code>, <code>1 to 5 Years</code>, <code>5 to 10 Years</code>, <code>10 to 15 Years</code>, <code>Over 15 Years</code></td>
+</tr>
+<tr>
+<td>knowledge</td>
+<td><code>limited</code>, <code>good</code>, <code>excellent</code></td>
+</tr>
+<tr>
+<td>experience</td>
+<td>An object that describes experience in different investment areas. The following properties are available: <code>stocks</code>, <code>option</code>, <code>margin</code>, <code>short_sales</code>, <code>mutual_funds</code>. Each property can have one of the following values: <code>None</code>, <code>Less than 1 Year</code>, <code>1 to 5 Years</code>, <code>6 to 10 Years</code>, <code>Over 10 Years</code>.</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Affiliations</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>employee_of_exchange</td>
+<td>A member of or employee of any securities, options or commodities Exchange or other Self-Regulatory Organization including a registered securities associations, registered clearing organization or the Municipal Securities Rulemaking Board</td>
+</tr>
+<tr>
+<td>employee_of_brokerdealer</td>
+<td>An employee of a broker/dealer or other member of the FINRA</td>
+</tr>
+<tr>
+<td>employee_of_regulator</td>
+<td>An employee of a state or federal securities regulator</td>
+</tr>
+<tr>
+<td>employee_of_advisor</td>
+<td>An employee of an investment advisor</td>
+</tr>
+<tr>
+<td>person_to_influence_securities</td>
+<td>A person in a position to influence or whose activities directly or indirectly involve, or are related to, the function of buying or selling securities</td>
+</tr>
+<tr>
+<td>person_to_contribute_major_capital</td>
+<td>A person who has contributed to the equity or capital of a broker/dealer, directly or indirectly, in an amount that exceeds 10% of the broker/dealer&#39;s equity or capital</td>
+</tr>
+<tr>
+<td>senior_officer_of_financial_institution</td>
+<td>A senior officer of a bank, savings, loan institution, insurance company, investment advisory firm or any other financial institution</td>
+</tr>
+<tr>
+<td>senior_officer_of_public_company</td>
+<td>An executive officer of a public company, whether US or non-US</td>
+</tr>
+<tr>
+<td>director_of_public_company</td>
+<td>A director of a public company, whether US or non-US</td>
+</tr>
+<tr>
+<td>major_shareholder_of_public_company</td>
+<td>A 10% shareholder of a public company, whether US or non-US</td>
+</tr>
+<tr>
+<td>senior_officer_foreign</td>
+<td>A current or former senior official of a foreign government or political party, or senior executive of a foreign goverment-owned commercial enterprise, or a family member or close associate of such person</td>
+</tr>
+<tr>
+<td>relationship_to_another_account</td>
+<td>Have relationship with another account at Just2Trade that you control, have a beneficial interest in or with which you coordinate trading</td>
+</tr>
+<tr>
+<td>relationship_to_another_entity</td>
+<td>Have relationship with entity which has an account at Just2Trade</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Legal Issues</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>bankruptcy</td>
+<td>Have you ever been the subject to a bankruptcy proceeding, receivership, or similar action</td>
+</tr>
+<tr>
+<td>legal_dispute</td>
+<td>Have you ever been in a legal dispute, arbitration, or reparations action related to a securities or commodities account</td>
+</tr>
+<tr>
+<td>unpaid_balance</td>
+<td>Have you ever closed an account with an unpaid balance at a securities or commodity firm</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Mandatory comment if any of the above is true</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Agreements</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>just2trade</td>
+<td>Just2Trade Market Agreement</td>
+</tr>
+<tr>
+<td>vision</td>
+<td>Vision Account Agreement</td>
+</tr>
+<tr>
+<td>vision_margin</td>
+<td>Vision Margin Supplement</td>
+</tr>
+<tr>
+<td>nyse</td>
+<td>NYSE Market Data Agreement</td>
+</tr>
+<tr>
+<td>nasdaq</td>
+<td>NASDAQ Market Data Agreement</td>
+</tr>
+<tr>
+<td>extended_hours</td>
+<td>Extended Hours Trading Risk Agreement</td>
+</tr>
+<tr>
+<td>otc</td>
+<td>OTC Market Data Agreement</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Documents</th>
+<th>&nbsp;</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>type</td>
+<td>Type of the document, only one type is supported: <code>identity</code></td>
+</tr>
+<tr>
+<td>file</td>
+<td>File name of the document, should include extenstion. For example, <code>scan.jpg</code></td>
+</tr>
+<tr>
+<td>content</td>
+<td>Base-64 encoded content of the file</td>
+</tr>
+</tbody></table>
+<h1 id='accounts'>Accounts</h1><h2 id='em-streaming-feed-not-live-yet-em'><em>Streaming feed - not live yet</em></h2><pre class="highlight shell tab-shell"><code>wscat
+    -H <span class="s2">"Authorization: Bearer {token here}"</span> -c wss://api.just2trade.com/accounts
+</code></pre>
+<blockquote>
+<p>Command examples</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"subscribeBalance"</span><span class="p">,</span><span class="s2">"account"</span><span class="p">:</span><span class="s2">"12345678@vision"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"subscribePositions"</span><span class="p">,</span><span class="s2">"account"</span><span class="p">:</span><span class="s2">"12345678@vision"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"subscribeOrders"</span><span class="p">,</span><span class="s2">"account"</span><span class="p">:</span><span class="s2">"12345678@vision"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"subscribeTrades"</span><span class="p">,</span><span class="s2">"account"</span><span class="p">:</span><span class="s2">"12345678@vision"</span><span class="w"> </span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"unsubscribeBalance"</span><span class="p">,</span><span class="s2">"account"</span><span class="p">:</span><span class="s2">"12345678@vision"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"unsubscribePositions"</span><span class="p">,</span><span class="s2">"account"</span><span class="p">:</span><span class="s2">"12345678@vision"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"unsubscribeOrders"</span><span class="p">,</span><span class="s2">"account"</span><span class="p">:</span><span class="s2">"12345678@vision"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"unsubscribeTrades"</span><span class="p">,</span><span class="s2">"account"</span><span class="p">:</span><span class="s2">"12345678@vision"</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Feed example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span></code></pre>
+<p>If authentication is denied the websocket connection is terminated immediately. The client should implement reconnection logic to maintain the opened connection. The following commands are supported:</p>
+
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>action</td>
+<td>Required. <code>subscribeTrades</code>, <code>subscribeBalance</code>, <code>subscribePositions</code>, <code>subscribeOrders</code></td>
+</tr>
+<tr>
+<td>account</td>
+<td>Required. An account number</td>
+</tr>
+</tbody></table>
+<h2 id='get-accounts-balances'>Get accounts balances</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/accounts'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678@vision"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"trade_platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETNA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"margin_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"marginx2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"restriction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"daytrades_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"account_value_total"</span><span class="p">:</span><span class="w"> </span><span class="mf">9880.6806</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cash"</span><span class="p">:</span><span class="w"> </span><span class="mf">5283.44</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"day_trading_buying_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"margin_buying_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">15243</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"non_margin_buying_power"</span><span class="p">:</span><span class="w"> </span><span class="mf">7621.5</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"position_market_value"</span><span class="p">:</span><span class="w"> </span><span class="mf">4597.2406</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unsettled_cash"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cash_to_withdraw"</span><span class="p">:</span><span class="w"> </span><span class="mf">7621.5</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11111111@cor"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"trade_platform"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ETNA"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"margin_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"daytrader"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"restriction"</span><span class="p">:</span><span class="w"> </span><span class="s2">"restricted"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"restriction_reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"please fund the account"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"daytrades_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"account_value_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cash"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"day_trading_buying_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"margin_buying_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"non_margin_buying_power"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"position_market_value"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"unsettled_cash"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cash_to_withdraw"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Get balance information for all user accounts as an array of the following json structures:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>account_number</td>
+<td>the account number</td>
+</tr>
+<tr>
+<td>trade_platform</td>
+<td>the trading platform this account is traded on</td>
+</tr>
+<tr>
+<td>margin_type</td>
+<td>the margin type, possible values are <code>cash</code>, <code>marginx1</code>, <code>marginx2</code>, <code>daytrader</code></td>
+</tr>
+<tr>
+<td>restriction</td>
+<td>restriction level effective on the account, possible values are <code>none</code> - no restrictions, <code>restricted</code> - opening transactions are not allowed but closing orders are accepted, <code>disabled</code> - no activity is allowed in the account, <code>closed</code> - the account is closed</td>
+</tr>
+<tr>
+<td>restriction_reason</td>
+<td>optional description explaining why the account is restricted</td>
+</tr>
+<tr>
+<td>daytrades_count</td>
+<td>day trades counter</td>
+</tr>
+<tr>
+<td>account_value_total</td>
+<td>total account liquidation value</td>
+</tr>
+<tr>
+<td>cash</td>
+<td>account debit balance when negative, credit balance when positive</td>
+</tr>
+<tr>
+<td>day_trading_buying_power</td>
+<td>day trading buying power for marginable securities</td>
+</tr>
+<tr>
+<td>margin_buying_power</td>
+<td>the buying power for marginable securities</td>
+</tr>
+<tr>
+<td>non_margin_buying_power</td>
+<td>the buying power for non-marginable securities</td>
+</tr>
+<tr>
+<td>position_market_value</td>
+<td>sum of all positions current market values. The value is negative for short positions</td>
+</tr>
+<tr>
+<td>unsettled_cash</td>
+<td>unsettled cash for cash accounts</td>
+</tr>
+<tr>
+<td>cash_to_withdraw</td>
+<td>cash available to withdraw from the account</td>
+</tr>
+</tbody></table>
+<h2 id='get-account-positions'>Get account positions</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/accounts/{account_number}/positions?date={date}'</span>
+</code></pre><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KEYS"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">90</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"average_open_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">26.061</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"current_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">42.17</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"security_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"common_stock"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GRNH"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"average_open_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0975</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"current_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.040600000000000004</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"security_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"common_stock"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TWTR"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"average_open_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">17.74043</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"current_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">17.38</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"security_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"common_stock"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RAD"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"average_open_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.37</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"current_price"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.87</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"security_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"common_stock"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Query parameters are:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>account_number</td>
+<td>Required. The account number</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Optional. Date in the format of yyyy-MM-dd. If not specified, the method returns current intraday positions</td>
+</tr>
+</tbody></table>
+
+<p>Returns an array of the following json structures:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>security symbol</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>number of shares or option contracts</td>
+</tr>
+<tr>
+<td>average_open_price</td>
+<td>average historical cost basis</td>
+</tr>
+<tr>
+<td>current_price</td>
+<td>current price</td>
+</tr>
+<tr>
+<td>security_type</td>
+<td>the type of security, the most common values are <code>common_stock</code>, <code>preferred_stock</code>, <code>option</code></td>
+</tr>
+</tbody></table>
+<h2 id='get-account-trades'>Get account trades</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/accounts/{account_number}/trades/{date}?limit={limit}&amp;skip={skip}'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"trades"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAPL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1507735400</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">156.6699</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">6266.8</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAC"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1506680904</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.43</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">-25.43</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sell_short"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAC"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1506680852</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.49</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">25.49</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy_to_cover"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">237</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Get the trades history on the specified account, ordered by descending timestamp. Query parameters are:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>account_number</td>
+<td>Required. The account number</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Required. The date yyyy-MM-dd</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Optional, 10 by default. The number of items to return on one page</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>Optional, 0 by default. The number of items to skip</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>Returns an array of trades and a counter of total trades matching the criteria. Every trade has the following structure:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>security symbol</td>
+</tr>
+<tr>
+<td>timestamp</td>
+<td>unix time stamp of the trade</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>number of shares or option contracts, negative for sells, positive for buys</td>
+</tr>
+<tr>
+<td>price</td>
+<td>the trade price</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>the trade amount, which is the quantity multiplied by the lot size and price,</td>
+</tr>
+<tr>
+<td>side</td>
+<td><code>buy</code>, <code>sell</code>, <code>sell_short</code> or <code>buy_to_cover</code></td>
+</tr>
+</tbody></table>
+<h2 id='em-get-account-holder-info-not-live-yet-em'><em>Get account holder info - not live yet</em></h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/accounts/{account_number}/holders'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Joint WROS"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe and Jane Doe Joint WROS"</span><span class="w">
+    </span><span class="s2">"holders"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"One Penn Plaza suite 1614, New York, NY, 10119"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111-22-3333"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@email.com"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Doe"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"primary"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"One Penn Plaza suite 1614, New York, NY, 10119"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111-22-3333"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"email_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email@email.com"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Returns non-trading account information, including holders contact info</p>
+<h2 id='transactions-journal'>Transactions journal</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/accounts/{account_number}/transactions?start_date={start_date}&amp;end_date={end_date}&amp;limit={limit}&amp;skip={skip}'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"transactions"</span><span class="p">:</span><span class="w">
+    </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1644455"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MONEY:OUT:CHRG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHRG MANDATORY REORG FEE REF:11111-222222,PUT PROSHARES"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-30"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"cash"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"gross_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">-30.00</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"net_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">-30.00</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1681283"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INSTRUM:IN:EXP"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXP PUT SOLAREDGE TECHS A $25 EXP 06/15/18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"asset"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEDG  180615P00025000"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"symbol_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEDG Jun 2018 25 Put"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"cash"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"gross_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"net_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"fees"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1681278"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INSTRUM:IN:ASG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ASG CALL RUBICON PROJECT INC $2.50 EXP 06/15/18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"asset"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RUBI  180615C00002500"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"symbol_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RUBI Jun 2018 2.5 Call"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"cash"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"gross_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"net_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"fees"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1681293"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SALE:EXCH:ASG"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ASG CALL RUBICON PROJECT INC $2.50 EXP 06/15/18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-18"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"asset"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RUBI"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"symbol_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"THE RUBICON PROJECT Inc"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">-2000</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.5</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"cash"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"gross_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"net_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">4980</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"fees"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Broker fee"</span><span class="p">,</span><span class="w"> </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">-20</span><span class="w"> </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1677793"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SELL-SHORT:EXCH:STD"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sell to Open 20 'NCMI Dec 2018 7.5 Call' @0.75"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-06-15"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"asset"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NCMI  181221C00007500"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"symbol_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NCMI Dec 2018 7.5 Call"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">-20</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.75</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"cash"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"gross_amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">1500</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"net_amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">1486.6845</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="s2">"fees"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Broker fee"</span><span class="p">,</span><span class="w"> </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">-2.5</span><span class="w"> </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Broker fee"</span><span class="p">,</span><span class="w"> </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">-9</span><span class="w"> </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TAF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.04</span><span class="w"> </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ORF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.756</span><span class="w"> </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OCC fee"</span><span class="p">,</span><span class="w"> </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="p">},</span><span class="w">
+                </span><span class="p">{</span><span class="w"> </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEC fee"</span><span class="p">,</span><span class="w"> </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mf">-0.0195</span><span class="w"> </span><span class="p">}</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">237</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Query parameters are:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>account_number</td>
+<td>Required. The account number</td>
+</tr>
+<tr>
+<td>start_date</td>
+<td>Optional. The period start date in the format of yyyy-MM-dd</td>
+</tr>
+<tr>
+<td>end_date</td>
+<td>Optional, current date by default. The period end date in the format of yyyy-MM-dd</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Optional, 10 by default. The number of items to return on one page</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>Optional, 0 by default. The number of items to skip</td>
+</tr>
+</tbody></table>
+
+<p>Returns an array of trasnactions and a counter of total transactions in the specified time period. Every transaction has the following structure:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>internal transaction id. It is globally unique and it is not necessarily sequentually incremented</td>
+</tr>
+<tr>
+<td>type</td>
+<td>transaction type</td>
+</tr>
+<tr>
+<td>description</td>
+<td>human-readable transaction description</td>
+</tr>
+<tr>
+<td>date</td>
+<td>date in the format of yyyy-MM-dd</td>
+</tr>
+<tr>
+<td>asset</td>
+<td>a structure describing the asset side of the transaction</td>
+</tr>
+<tr>
+<td>asset.symbol</td>
+<td>symbol</td>
+</tr>
+<tr>
+<td>asset.symbol_description</td>
+<td>company name for stocks or human-readable name for options</td>
+</tr>
+<tr>
+<td>asset.quantity</td>
+<td>transaction quantity, can be positive or negative</td>
+</tr>
+<tr>
+<td>asset.price</td>
+<td>the price for each unit</td>
+</tr>
+<tr>
+<td>cash</td>
+<td>describes the cash side of the transaction</td>
+</tr>
+<tr>
+<td>cash.gross_amount</td>
+<td>dollar amount not including fees, can be positive or negative</td>
+</tr>
+<tr>
+<td>cash.net_amount</td>
+<td>net dollar amount including fees charged for the transaction, can be positive or negative</td>
+</tr>
+<tr>
+<td>fees</td>
+<td>array of fees charged by the current transaction. Every fee item has a <code>name</code> and <code>amount</code> properties</td>
+</tr>
+</tbody></table>
+<h1 id='trading'>Trading</h1><h2 id='validate-an-order'>Validate an order</h2><pre class="highlight shell tab-shell"><code>curl -X POST
+  --header <span class="s1">'Content-Type: application/json'</span>
+  --header <span class="s1">'Accept: application/json'</span>
+  --header <span class="s1">'Authorization: Bearer {token here}'</span>
+  -d <span class="s1">'{ \ 
+   "account_number": "12345678@vision", \ 
+   "symbol": "string", \ 
+   "quantity": 1, \ 
+   "price": 21.0, \ 
+   "stop_price": 0, \ 
+   "time_in_force": "day", \ 
+   "order_type": "limit", \ 
+   "side": "buy", \ 
+   "comment": "string", \ 
+   "exchange": "string" \ 
+ }'</span> <span class="s1">'https://api.just2trade.com/orders/validate'</span>
+</code></pre><pre class="highlight cpp tab-cpp--mql"><code><span class="kt">void</span> <span class="nf">ValidateOrder</span><span class="p">(</span><span class="n">string</span> <span class="n">access_token</span><span class="p">,</span> <span class="n">string</span> <span class="n">account_number</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">//--- REST client's HTTP vars
+</span>  <span class="n">string</span> <span class="n">uri</span> <span class="o">=</span> <span class="s">"https://api.just2trade.com/orders/validate"</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">post</span><span class="p">[];</span>
+  <span class="kt">char</span> <span class="n">result</span><span class="p">[];</span>
+  <span class="n">string</span> <span class="n">headersResult</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">header</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">res</span><span class="p">;</span>
+
+  <span class="c1">//--- Form the request body 
+</span>  <span class="n">header</span> <span class="o">=</span> <span class="s">"Content-Type: application/json</span><span class="se">\r\n</span><span class="s">"</span><span class="p">;</span> 
+  <span class="n">header</span> <span class="o">+=</span> <span class="s">"Accept: application/json</span><span class="se">\r\n</span><span class="s">"</span><span class="p">;</span>     
+  <span class="n">header</span> <span class="o">+=</span> <span class="s">"Authorization: Bearer "</span><span class="o">+</span><span class="n">access_token</span><span class="o">+</span><span class="s">"</span><span class="se">\r\n</span><span class="s">"</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">postData</span> <span class="o">=</span> <span class="s">"{ </span><span class="se">\"</span><span class="s">account_number</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">"</span> <span class="o">+</span> <span class="n">account_number</span> <span class="o">+</span> <span class="s">"</span><span class="se">\"</span><span class="s">, </span><span class="se">\"</span><span class="s">symbol</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">ZVZZT</span><span class="se">\"</span><span class="s">, </span><span class="se">\"</span><span class="s">quantity</span><span class="se">\"</span><span class="s">: 50, </span><span class="se">\"</span><span class="s">price</span><span class="se">\"</span><span class="s">: 10.00, </span><span class="se">\"</span><span class="s">order_type</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">limit</span><span class="se">\"</span><span class="s">, </span><span class="se">\"</span><span class="s">side</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">buy</span><span class="se">\"</span><span class="s"> }"</span><span class="p">;</span>
+
+  <span class="n">ArrayResize</span><span class="p">(</span><span class="n">post</span><span class="p">,</span> <span class="n">StringToCharArray</span><span class="p">(</span><span class="n">postData</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">WHOLE_ARRAY</span><span class="p">,</span> <span class="n">CP_UTF8</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="c1">//--- reset last error
+</span>  <span class="n">ResetLastError</span><span class="p">();</span>
+
+  <span class="c1">//--- post data to REST API
+</span>  <span class="n">res</span> <span class="o">=</span> <span class="n">WebRequest</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">headersResult</span><span class="p">);</span>
+
+  <span class="c1">//--- check errors
+</span>  <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Print</span><span class="p">(</span><span class="s">"Error code ="</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">());</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="c1">//--- successful
+</span>    <span class="n">Print</span><span class="p">(</span><span class="s">"Server response: "</span><span class="p">,</span> <span class="n">CharArrayToString</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+  <span class="p">}</span>          
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Request example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678@vision"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">21.0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"stop_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"time_in_force"</span><span class="p">:</span><span class="w"> </span><span class="s2">"day"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any comment"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Auto"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"is_valid"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"validation_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"You cannot sell more shares than your effective long position (effective long position = long position less open sell orders) using one order ticket. Please check your pending order(s) for potential outstanding duplicate order(s). Industry regulations require that two order tickets be submitted: one to sell your effective long position and one to sell your desired short position."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The method verifies an order and responds with the validation message if the order can not be placed at the moment. The order is not sent to market.</p>
+<h3 id='request'>Request</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>account_number</td>
+<td>Required. The account number in the format of <code>123456578@vision</code></td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>Required. The security symbol, stocks in Nasdaq CMS convention, options in OCC</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>Required. The positive decimal, number of shares or contracts</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Required positive decimal if the <code>order_type</code> is <code>limit</code> or <code>stop_limit</code></td>
+</tr>
+<tr>
+<td>stop_price</td>
+<td>Required positive decimal if the <code>order_type</code> is <code>stop</code> or <code>stop_limit</code></td>
+</tr>
+<tr>
+<td>time_in_force</td>
+<td>Optional, <code>day</code> by default. Specifies how long the order remains in effect. Possible values are <code>day</code>, <code>good_till_cancel</code>, <code>good_till_crossing</code></td>
+</tr>
+<tr>
+<td>order_type</td>
+<td>Optional, <code>market</code> by default. Possible values are <code>market</code>, <code>limit</code>, <code>stop</code>, <code>stop_limit</code>, <code>market_on_close</code>, <code>limit_on_close</code></td>
+</tr>
+<tr>
+<td>side</td>
+<td>Optional, <code>buy</code> by default. Available values are <code>buy</code> and <code>sell</code>. <code>buy</code> opens long position, <code>sell</code> closes the position. The system will detemine the proper side according to the current position, but you are still required to place two orders to revert the position from long to short and the other way around.</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Optional, any string</td>
+</tr>
+<tr>
+<td>exchange</td>
+<td>Optional, <code>auto</code> by default. The routing instructions for order execution. The actual values are dynamic and depend on the account settings. Some of the possible values are <code>NASDAQ</code> or <code>ARCA</code></td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>The method returns the following json structure:</p>
+
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>is_valid</td>
+<td><code>true</code> or <code>false</code></td>
+</tr>
+<tr>
+<td>validation_message</td>
+<td>Optional reject reason</td>
+</tr>
+</tbody></table>
+<h2 id='place-an-order'>Place an order</h2><pre class="highlight shell tab-shell"><code>curl -X POST
+  --header <span class="s1">'Content-Type: application/json'</span>
+  --header <span class="s1">'Accept: application/json'</span>
+  --header <span class="s1">'Authorization: Bearer {token here}'</span>
+  -d <span class="s1">'{ \ 
+   "account_number": "12345678@vision", \ 
+   "symbol": "BAC", \ 
+   "quantity": 1, \ 
+   "price": 20, \ 
+   "stop_price": 0, \ 
+   "time_in_force": "day", \ 
+   "order_type": "limit", \ 
+   "side": "buy", \ 
+   "comment": "any comment", \ 
+   "exchange": "Auto" \ 
+ }'</span> <span class="s1">'https://api.just2trade.com/orders/place'</span>
+</code></pre><pre class="highlight cpp tab-cpp--mql"><code><span class="kt">void</span> <span class="nf">PlaceOrder</span><span class="p">(</span><span class="n">string</span> <span class="n">access_token</span><span class="p">,</span> <span class="n">string</span> <span class="n">account_number</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">//--- REST client's HTTP vars
+</span>  <span class="n">string</span> <span class="n">uri</span> <span class="o">=</span> <span class="s">"https://api.just2trade.com/orders/place"</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">post</span><span class="p">[];</span>
+  <span class="kt">char</span> <span class="n">result</span><span class="p">[];</span>
+  <span class="n">string</span> <span class="n">headersResult</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">header</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">res</span><span class="p">;</span>
+
+  <span class="c1">//--- Form the request body 
+</span>  <span class="n">header</span> <span class="o">=</span> <span class="s">"Content-Type: application/json</span><span class="se">\r\n</span><span class="s">"</span><span class="p">;</span> 
+  <span class="n">header</span> <span class="o">+=</span> <span class="s">"Accept: application/json</span><span class="se">\r\n</span><span class="s">"</span><span class="p">;</span>     
+  <span class="n">header</span> <span class="o">+=</span> <span class="s">"Authorization: Bearer "</span><span class="o">+</span><span class="n">access_token</span><span class="o">+</span><span class="s">"</span><span class="se">\r\n</span><span class="s">"</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">postData</span> <span class="o">=</span> <span class="s">"{ </span><span class="se">\"</span><span class="s">account_number</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">"</span> <span class="o">+</span> <span class="n">account_number</span> <span class="o">+</span> <span class="s">"</span><span class="se">\"</span><span class="s">, </span><span class="se">\"</span><span class="s">symbol</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">ZVZZT</span><span class="se">\"</span><span class="s">, </span><span class="se">\"</span><span class="s">quantity</span><span class="se">\"</span><span class="s">: 50, </span><span class="se">\"</span><span class="s">price</span><span class="se">\"</span><span class="s">: 10.00, </span><span class="se">\"</span><span class="s">order_type</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">limit</span><span class="se">\"</span><span class="s">, </span><span class="se">\"</span><span class="s">side</span><span class="se">\"</span><span class="s">: </span><span class="se">\"</span><span class="s">buy</span><span class="se">\"</span><span class="s"> }"</span><span class="p">;</span>
+
+  <span class="n">ArrayResize</span><span class="p">(</span><span class="n">post</span><span class="p">,</span> <span class="n">StringToCharArray</span><span class="p">(</span><span class="n">postData</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">WHOLE_ARRAY</span><span class="p">,</span> <span class="n">CP_UTF8</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+
+  <span class="c1">//--- reset last error
+</span>  <span class="n">ResetLastError</span><span class="p">();</span>
+
+  <span class="c1">//--- post data to REST API
+</span>  <span class="n">res</span> <span class="o">=</span> <span class="n">WebRequest</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">headersResult</span><span class="p">);</span>
+
+  <span class="c1">//--- check errors
+</span>  <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Print</span><span class="p">(</span><span class="s">"Error code ="</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">());</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="c1">//--- successful
+</span>    <span class="n">Print</span><span class="p">(</span><span class="s">"Server response: "</span><span class="p">,</span> <span class="n">CharArrayToString</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+  <span class="p">}</span>          
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Request example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678@vision"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAC"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">20.0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"stop_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"time_in_force"</span><span class="p">:</span><span class="w"> </span><span class="s2">"day"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">"any comment"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Auto"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"201710041710516537"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The order is accepted immediately, the method returns assigned id. The order is still validated with exactly same logic as in <a href="#validate-an-order">validate</a> method and is sent to market on successful validation pass. Otherwise, the order will reject asynchronously and you can query its status by calling the <a href="#get-order-details">details</a> method.</p>
+<h3 id='response-2'>Response</h3>
+<table><thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>success</td>
+<td>true</td>
+</tr>
+<tr>
+<td>data</td>
+<td>the id assigned to the order</td>
+</tr>
+</tbody></table>
+<h2 id='get-order-details'>Get order details</h2><pre class="highlight shell tab-shell"><code>curl -X GET
+  --header <span class="s1">'Accept: application/json'</span>
+  --header <span class="s1">'Authorization: Bearer {token here}'</span>
+  <span class="s1">'https://api.just2trade.com/orders/{id}'</span>
+</code></pre><pre class="highlight cpp tab-cpp--mql"><code><span class="n">string</span> <span class="nf">GetOrderDetails</span><span class="p">(</span><span class="n">string</span> <span class="n">access_token</span><span class="p">,</span> <span class="n">string</span> <span class="n">id</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="c1">//--- REST client's HTTP vars
+</span>  <span class="n">string</span> <span class="n">header</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">result</span><span class="p">[];</span>
+  <span class="kt">char</span> <span class="n">post</span><span class="p">[];</span>
+  <span class="n">string</span> <span class="n">headersResult</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">res</span><span class="p">;</span>
+  <span class="n">string</span> <span class="n">uri</span> <span class="o">=</span> <span class="s">"https://api.just2trade.com/orders/"</span> <span class="o">+</span> <span class="n">id</span><span class="p">;</span>
+
+  <span class="c1">//--- Form the request body 
+</span>  <span class="n">header</span> <span class="o">+=</span> <span class="s">"Accept: application/json</span><span class="se">\r\n</span><span class="s">"</span><span class="p">;</span>     
+  <span class="n">header</span> <span class="o">+=</span> <span class="s">"Authorization: Bearer "</span> <span class="o">+</span> <span class="n">access_token</span> <span class="o">+</span> <span class="s">"</span><span class="se">\r\n</span><span class="s">"</span><span class="p">;</span>
+
+  <span class="c1">//--- post data to REST API
+</span>  <span class="n">res</span> <span class="o">=</span> <span class="n">WebRequest</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">uri</span><span class="p">,</span> <span class="n">header</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="n">post</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">headersResult</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="n">res</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">Print</span><span class="p">(</span><span class="s">"Error code = "</span><span class="p">,</span> <span class="n">GetLastError</span><span class="p">());</span>
+  <span class="p">}</span>
+  <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="n">Print</span><span class="p">(</span><span class="s">"Successful, server response: "</span> <span class="o">+</span> <span class="n">CharArrayToString</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" Res: "</span> <span class="o">+</span> <span class="p">(</span><span class="n">string</span><span class="p">)</span><span class="n">res</span><span class="p">);</span>
+  <span class="p">}</span>  
+  <span class="k">return</span> <span class="n">CharArrayToString</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678@vision"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20171003209384646"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Auto"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"executed_quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"stop_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"time_in_force"</span><span class="p">:</span><span class="w"> </span><span class="s2">"day"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"order_side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAC"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Get the order details by the specified order id</p>
+<h3 id='request-2'>Request</h3>
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Required. The order id</td>
+</tr>
+</tbody></table>
+<h3 id='response-3'>Response</h3>
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>account_number</td>
+<td>the account number in the format of <code>123456578@vision</code></td>
+</tr>
+<tr>
+<td>client_id</td>
+<td>the order id</td>
+</tr>
+<tr>
+<td>exchange</td>
+<td>the routing instructions</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>number of shares or contracts requested by the order</td>
+</tr>
+<tr>
+<td>executed_quantity</td>
+<td>number of shares or contracts executed by this time</td>
+</tr>
+<tr>
+<td>order_status</td>
+<td>the order status. Possible values are <code>new</code>, <code>pending_new</code>, <code>partially_filled</code>, <code>filled</code>, <code>pending_cancel</code>, <code>canceled</code>, <code>pending_replace</code>, <code>replaced</code>, <code>rejected</code>, <code>done_for_day</code>, <code>expired</code></td>
+</tr>
+<tr>
+<td>price</td>
+<td>limit price if applicable</td>
+</tr>
+<tr>
+<td>stop_price</td>
+<td>stop price is applicable</td>
+</tr>
+<tr>
+<td>time_in_force</td>
+<td>order duration instructions</td>
+</tr>
+<tr>
+<td>order_type</td>
+<td>type of the order</td>
+</tr>
+<tr>
+<td>order_side</td>
+<td>side of the order</td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>security symbol</td>
+</tr>
+</tbody></table>
+<h2 id='get-active-orders'>Get active orders</h2><pre class="highlight shell tab-shell"><code>curl -X GET
+  --header <span class="s1">'Accept: application/json'</span>
+  --header <span class="s1">'Authorization: Bearer {token here}'</span>
+  <span class="s1">'https://api.just2trade.com/accounts/{account_number}/activeorders'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"account_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345678@vision"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20171003209384646"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Auto"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"executed_quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"stop_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"time_in_force"</span><span class="p">:</span><span class="w"> </span><span class="s2">"day"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"order_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"limit"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"order_side"</span><span class="p">:</span><span class="w"> </span><span class="s2">"buy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAC"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Get an array of active orders</p>
+<h2 id='cancel-an-order'>Cancel an order</h2><pre class="highlight shell tab-shell"><code>curl -X POST
+  --header <span class="s1">'Content-Type: application/json'</span>
+  --header <span class="s1">'Accept: application/json'</span>
+  --header <span class="s1">'Authorization: Bearer {token here}'</span>
+  -d <span class="s1">'{ \ 
+   "message": "string" \ 
+ }'</span> <span class="s1">'https://api.just2trade.com/orders/20171003209384646/cancel'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"success"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"201710041710516537"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Cancel the specified order</p>
+<h3 id='request-3'>Request</h3>
+<p>the order is identified by its id on the url. The request can also contain optional info</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>message</td>
+<td>Optional, any string</td>
+</tr>
+</tbody></table>
+<h3 id='response-4'>Response</h3>
+<table><thead>
+<tr>
+<th>name</th>
+<th>value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>success</td>
+<td>true</td>
+</tr>
+<tr>
+<td>data</td>
+<td>the cancellation request id</td>
+</tr>
+</tbody></table>
+<h2 id='em-estimate-fee-charges-not-live-yet-em'><em>Estimate fee charges - not live yet</em></h2><pre class="highlight shell tab-shell"><code>curl -X POST
+  --header <span class="s1">'Content-Type: application/json'</span>
+  --header <span class="s1">'Accept: application/json'</span>
+  --header <span class="s1">'Authorization: Bearer {token here}'</span>
+  -d <span class="s1">'{ \ 
+   "commission_plan": "per_trade", \ 
+   "symbol": "TSLA", \ 
+   "quantity": 50, \ 
+   "side": "sell", \ 
+   "direct_route": true \ 
+ }'</span> <span class="s1">'https://api.just2trade.com/pricing/fees'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.5000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Broker commission"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1500"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ECN"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.1827"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SEC"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.0060"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TAF"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>The method returns estimated fees for specified order parameters, breaking down all charges by type</p>
+<h3 id='request-4'>Request</h3>
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>commission_plan</td>
+<td>Optional. Available values are <code>per_share</code>, <code>per_trade</code>, <code>zero</code>. Default is <code>per_trade</code></td>
+</tr>
+<tr>
+<td>symbol</td>
+<td>Required. A stock or an option</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>Required. Order quantity</td>
+</tr>
+<tr>
+<td>side</td>
+<td>Required. Available values are <code>buy</code>, <code>sell</code>, <code>sell_short</code>, <code>buy_to_cover</code></td>
+</tr>
+<tr>
+<td>direct_route</td>
+<td>Optional boolean value. <code>false</code> by default.</td>
+</tr>
+</tbody></table>
+<h3 id='response-5'>Response</h3>
+<p>An array of items breaking down all charges</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>amount</td>
+<td>Dollar amount</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Charge description</td>
+</tr>
+</tbody></table>
+<h1 id='market-data'>Market data</h1>
+<p>All data is 15 min delayed.</p>
+<h2 id='streaming-feed'>Streaming feed</h2><pre class="highlight shell tab-shell"><code>wscat
+    -H <span class="s2">"Authorization: Bearer {token here}"</span> -c wss://api.just2trade.com/marketdata
+</code></pre>
+<blockquote>
+<p>Command examples</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"subscribe"</span><span class="p">,</span><span class="s2">"symbols"</span><span class="p">:[</span><span class="s2">"AAPL"</span><span class="p">,</span><span class="s2">"MSFT"</span><span class="p">,</span><span class="s2">"GOOG"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+
+</span><span class="p">{</span><span class="w"> </span><span class="s2">"action"</span><span class="p">:</span><span class="s2">"unsubscribe"</span><span class="p">,</span><span class="s2">"symbols"</span><span class="p">:[</span><span class="s2">"AAPL"</span><span class="p">,</span><span class="s2">"MSFT"</span><span class="p">,</span><span class="s2">"GOOG"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Feed example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"t"</span><span class="p">:</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"s"</span><span class="p">:</span><span class="s2">"AAPL"</span><span class="p">,</span><span class="s2">"ls"</span><span class="p">:</span><span class="mi">210</span><span class="p">,</span><span class="s2">"lm"</span><span class="p">:</span><span class="s2">"EDGX"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">:</span><span class="mf">268.81</span><span class="p">,</span><span class="s2">"as"</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mf">268.68</span><span class="p">,</span><span class="s2">"bs"</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mf">268.68</span><span class="p">,</span><span class="s2">"high"</span><span class="p">:</span><span class="mf">270.07</span><span class="p">,</span><span class="s2">"low"</span><span class="p">:</span><span class="mf">265.86</span><span class="p">,</span><span class="s2">"open"</span><span class="p">:</span><span class="mf">268.6</span><span class="p">,</span><span class="s2">"close"</span><span class="p">:</span><span class="mf">268.48</span><span class="p">,</span><span class="s2">"change"</span><span class="p">:</span><span class="mf">1.560000</span><span class="p">,</span><span class="s2">"change_pc"</span><span class="p">:</span><span class="mf">0.58</span><span class="p">,</span><span class="s2">"d"</span><span class="p">:</span><span class="mi">1576018013</span><span class="p">,</span><span class="s2">"v"</span><span class="p">:</span><span class="mi">21118864</span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="s2">"t"</span><span class="p">:</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"s"</span><span class="p">:</span><span class="s2">"MSFT"</span><span class="p">,</span><span class="s2">"ls"</span><span class="p">:</span><span class="mi">670</span><span class="p">,</span><span class="s2">"lm"</span><span class="p">:</span><span class="s2">"FINR"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">:</span><span class="mf">151.23</span><span class="p">,</span><span class="s2">"as"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mf">151.15</span><span class="p">,</span><span class="s2">"bs"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mf">151.21</span><span class="p">,</span><span class="s2">"high"</span><span class="p">:</span><span class="mf">151.89</span><span class="p">,</span><span class="s2">"low"</span><span class="p">:</span><span class="mf">150.765</span><span class="p">,</span><span class="s2">"open"</span><span class="p">:</span><span class="mf">151.29</span><span class="p">,</span><span class="s2">"close"</span><span class="p">:</span><span class="mf">151.13</span><span class="p">,</span><span class="s2">"change"</span><span class="p">:</span><span class="mf">-0.230000</span><span class="p">,</span><span class="s2">"change_pc"</span><span class="p">:</span><span class="mf">-0.15</span><span class="p">,</span><span class="s2">"d"</span><span class="p">:</span><span class="mi">1576011600</span><span class="p">,</span><span class="s2">"v"</span><span class="p">:</span><span class="mi">15483417</span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="s2">"t"</span><span class="p">:</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"s"</span><span class="p">:</span><span class="s2">"GOOG"</span><span class="p">,</span><span class="s2">"ls"</span><span class="p">:</span><span class="mi">1068</span><span class="p">,</span><span class="s2">"lm"</span><span class="p">:</span><span class="s2">"FINR"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">:</span><span class="mf">1345.75</span><span class="p">,</span><span class="s2">"as"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">"b"</span><span class="p">:</span><span class="mf">1343.51</span><span class="p">,</span><span class="s2">"bs"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mf">1344.66</span><span class="p">,</span><span class="s2">"high"</span><span class="p">:</span><span class="mf">1349.975</span><span class="p">,</span><span class="s2">"low"</span><span class="p">:</span><span class="mf">1336.04</span><span class="p">,</span><span class="s2">"open"</span><span class="p">:</span><span class="mf">1341.5</span><span class="p">,</span><span class="s2">"close"</span><span class="p">:</span><span class="mf">1344.66</span><span class="p">,</span><span class="s2">"change"</span><span class="p">:</span><span class="mf">1.100000</span><span class="p">,</span><span class="s2">"change_pc"</span><span class="p">:</span><span class="mf">0.08</span><span class="p">,</span><span class="s2">"d"</span><span class="p">:</span><span class="mi">1576011600</span><span class="p">,</span><span class="s2">"v"</span><span class="p">:</span><span class="mi">1054746</span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="s2">"t"</span><span class="p">:</span><span class="s2">"t"</span><span class="p">,</span><span class="s2">"s"</span><span class="p">:</span><span class="s2">"AAPL"</span><span class="p">,</span><span class="s2">"ls"</span><span class="p">:</span><span class="mi">298</span><span class="p">,</span><span class="s2">"lm"</span><span class="p">:</span><span class="s2">"EDGX"</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mf">268.79</span><span class="p">,</span><span class="s2">"d"</span><span class="p">:</span><span class="mi">1576018263</span><span class="p">}</span><span class="w">
+</span><span class="p">{</span><span class="s2">"t"</span><span class="p">:</span><span class="s2">"t"</span><span class="p">,</span><span class="s2">"s"</span><span class="p">:</span><span class="s2">"AAPL"</span><span class="p">,</span><span class="s2">"ls"</span><span class="p">:</span><span class="mi">200</span><span class="p">,</span><span class="s2">"lm"</span><span class="p">:</span><span class="s2">"EDGX"</span><span class="p">,</span><span class="s2">"l"</span><span class="p">:</span><span class="mf">268.8</span><span class="p">,</span><span class="s2">"d"</span><span class="p">:</span><span class="mi">1576018325</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>If authentication is denied the websocket connection is terminated immediately. The client should implement reconnection logic to maintain the opened connection. The following commands are supported:</p>
+
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>action</td>
+<td>Required. <code>subscribe</code> or <code>unsubscribe</code></td>
+</tr>
+<tr>
+<td>symbols</td>
+<td>An array of symbols</td>
+</tr>
+</tbody></table>
+
+<p>Subscription command for a symbol that has already been subscribed is ignored. Same behavior applies to Unsubscribe.</p>
+<h3 id='trade'>Trade</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>t</td>
+<td>Type <code>t</code></td>
+</tr>
+<tr>
+<td>s</td>
+<td>Symbol</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>Last Size. Trade quantity</td>
+</tr>
+<tr>
+<td>lm</td>
+<td>Last Market. Trade market center</td>
+</tr>
+<tr>
+<td>l</td>
+<td>Last. Trade Price</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Date. Timestamp in unix format</td>
+</tr>
+</tbody></table>
+<h3 id='aggregate'>Aggregate</h3>
+<p>The server sends a snapshot of current quote data as the first message after successful subscription. All subsequent <code>aggregate</code> messages contain only fields changed since last update.</p>
+
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>t</td>
+<td>Type <code>a</code></td>
+</tr>
+<tr>
+<td>s</td>
+<td>Symbol</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>Last Size. Trade quantity</td>
+</tr>
+<tr>
+<td>l</td>
+<td>Last. Trade price</td>
+</tr>
+<tr>
+<td>a</td>
+<td>Ask</td>
+</tr>
+<tr>
+<td>as</td>
+<td>Ask Size</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Bid</td>
+</tr>
+<tr>
+<td>bs</td>
+<td>Bid Size</td>
+</tr>
+<tr>
+<td>o</td>
+<td>Open price</td>
+</tr>
+<tr>
+<td>h</td>
+<td>High</td>
+</tr>
+<tr>
+<td>low</td>
+<td>Low price</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Close price</td>
+</tr>
+<tr>
+<td>ch</td>
+<td>Change</td>
+</tr>
+<tr>
+<td>chpc</td>
+<td>Change percent</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Date. Timestamp in unix format</td>
+</tr>
+</tbody></table>
+<h3 id='error'>Error</h3>
+<table><thead>
+<tr>
+<th>field</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>t</td>
+<td>Type <code>e</code></td>
+</tr>
+<tr>
+<td>code</td>
+<td>Error code</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Error description</td>
+</tr>
+</tbody></table>
+<h2 id='get-current-quote'>Get current quote</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/marketdata/quote?symbol=AAPL'</span>
+</code></pre>
+<blockquote>
+<p>Returns the following structure:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAPL"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ask"</span><span class="p">:</span><span class="w"> </span><span class="mf">154.61</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"ask_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"bid"</span><span class="p">:</span><span class="w"> </span><span class="mf">154.6</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"bid_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last"</span><span class="p">:</span><span class="w"> </span><span class="mf">154.61</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"last_size"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mi">9461271</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="mi">1507049383</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"high"</span><span class="p">:</span><span class="w"> </span><span class="mf">155.09</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"low"</span><span class="p">:</span><span class="w"> </span><span class="mf">153.91</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="mf">154.01</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"close"</span><span class="p">:</span><span class="w"> </span><span class="mf">153.81</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"week52_high"</span><span class="p">:</span><span class="w"> </span><span class="mf">164.94</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"week52_low"</span><span class="p">:</span><span class="w"> </span><span class="mf">104.08</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"change"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.52</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"change_pc"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"open_interest"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>The query retrieves current quote for the specified symbol.</p>
+<h3 id='request'>Request</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>Required. The security symbol</td>
+</tr>
+</tbody></table>
+<h3 id='response'>Response</h3>
+<p>The data depends on current time of day.</p>
+<h2 id='get-current-quotes-array'>Get current quotes array</h2><pre class="highlight shell tab-shell"><code>curl
+    -X POST
+    --header <span class="s1">'Content-Type: application/json'</span>
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+  -d <span class="s1">'["GOOG", "AAPL", "MSFT"]'</span>
+  <span class="s1">'https://api.just2trade.com/marketdata/quotes'</span>
+</code></pre>
+<blockquote>
+<p>Returns an array of quotes:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GOOG"</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AAPL"</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MSFT"</span><span class="p">,</span><span class="w">
+        </span><span class="err">...</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>The query retrieves current quotes for all symbols specified on the request array</p>
+<h2 id='get-quotes-history'>Get quotes history</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/marketdata/history?symbol=AAPL&amp;period=day&amp;from=1483228800&amp;to=1483488000'</span>
+</code></pre>
+<blockquote>
+<p>Returns an array of candles:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1483074000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"day"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="mf">116.65</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"high"</span><span class="p">:</span><span class="w"> </span><span class="mf">117.2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"low"</span><span class="p">:</span><span class="w"> </span><span class="mf">115.43</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"close"</span><span class="p">:</span><span class="w"> </span><span class="mf">115.82</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mi">24541183</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1483419600</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"period"</span><span class="p">:</span><span class="w"> </span><span class="s2">"day"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="mf">115.8</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"high"</span><span class="p">:</span><span class="w"> </span><span class="mf">116.33</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"low"</span><span class="p">:</span><span class="w"> </span><span class="mf">114.76</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"close"</span><span class="p">:</span><span class="w"> </span><span class="mf">116.15</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"volume"</span><span class="p">:</span><span class="w"> </span><span class="mi">24719541</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>The query returns candle structures aggregated by specified period</p>
+<h3 id='request-2'>Request</h3>
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>Required. The security symbol, stocks in Nasdaq CMS convention. Options are not supported</td>
+</tr>
+<tr>
+<td>period</td>
+<td>Required. The supported periods are: <code>minute</code>, <code>minute_5</code>, <code>minute_15</code>, <code>minute_30</code>, <code>hour</code>, <code>day</code>, <code>week</code>, <code>month</code>, <code>quarter</code>, <code>year</code></td>
+</tr>
+<tr>
+<td>from</td>
+<td>Required. Start of the period, unix timestamp</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Required. End of the period, unix timestamp</td>
+</tr>
+</tbody></table>
+<h2 id='em-get-trading-schedule-not-live-yet-em'><em>Get trading schedule - not live yet</em></h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/marketdata/schedule'</span>
+</code></pre>
+<blockquote>
+<p>Response example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"session"</span><span class="p">:</span><span class="w"> </span><span class="s2">"regular_market"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Returns trading session info depending on current date and time:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>session</td>
+<td>One of the following values: <code>pre_market</code>, <code>regular_market</code>, <code>after_market</code>, <code>closed</code>.</td>
+</tr>
+</tbody></table>
+<h2 id='lookup-securities'>Lookup securities</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/securities?query=ba&amp;limit=4'</span>
+</code></pre>
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"securities"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BA"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BOEING COMPANY"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAC"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANK OF AMERICA CORPORATION"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAX"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAXTER INTERNATIONAL Inc"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BAP"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CREDICORP Ltd"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2492</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Searches the securities reference by the specified criteria. The criteria can be a symbol, part of a symbol or part of a company name. Query parameters are:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>query</td>
+<td>Required. The search criteria.</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Optional, 10 by default. The number of items to return on one page</td>
+</tr>
+</tbody></table>
+<h2 id='em-get-time-and-sales-not-live-yet-em'><em>Get time and sales - not live yet</em></h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/marketdata/trades?symbol=IBM&amp;limit=4&amp;from=1513362185&amp;to=1513362190'</span>
+</code></pre>
+<blockquote>
+<p>Response example:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"trades"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1513362190</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">152.44</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BOS"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1513362190</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">152.44</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EDGA"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1513362188</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">152.4699</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NDD"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"timestamp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1513362185</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mf">152.45</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"market"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NASDAQ"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<aside class="warning">
+Early preview documentation, not available live yet
+</aside>
+
+<p>Retrieves the time and sales history, ordered by descending timestamp. Query parameters are:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>Required. The security symbol, stocks in Nasdaq CMS convention. Options are not supported</td>
+</tr>
+<tr>
+<td>from</td>
+<td>Required. Start of the period, unix timestamp</td>
+</tr>
+<tr>
+<td>to</td>
+<td>Required. End of the period, unix timestamp</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>Optional, 10 by default. The number of items to return on one page</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>Optional, 0 by default. The number of items to skip</td>
+</tr>
+</tbody></table>
+<h2 id='get-option-series'>Get option series</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/securities/VXX/options/series'</span>
+</code></pre>
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"VXX"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"VXX1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"VXX2"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Returns an array of option series by the specified underlying security&#39;s symbol. Contains at least one element which is the default series. Option Series is a specific set of calls or puts on the same underlying security, with the same strike price and expiration date. For the most part there is just one series name that matches the symbol but in some cases related to corporate actions on the underlying security additional series are issued.</p>
+<h2 id='get-option-expirations'>Get option expirations</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/securities/{symbol}/options/expirations?series={series}'</span>
+</code></pre>
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="s2">"2017-11-17"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2017-11-24"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2017-12-01"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2017-12-15"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2018-01-19"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2018-02-16"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2018-04-20"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2018-06-15"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2018-09-21"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"2019-01-18"</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Returns an array of all available option expiration dates formatted as yyyy-mm-dd. Parameters are:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>Required. The root symbol.</td>
+</tr>
+<tr>
+<td>series</td>
+<td>Optional. By default the series is the same as the the root symbol</td>
+</tr>
+</tbody></table>
+<h2 id='get-option-chain'>Get option chain</h2><pre class="highlight shell tab-shell"><code>curl
+    -X GET
+    --header <span class="s1">'Accept: application/json'</span>
+    --header <span class="s1">'Authorization: Bearer {token here}'</span>
+    <span class="s1">'https://api.just2trade.com/securities/{symbol}/options?expiration={expiration}&amp;series={series}'</span>
+</code></pre>
+<blockquote>
+<p>Response example</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VXX2  171117C00008000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"call"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"strike"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VXX2  171117P00008000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"put"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"strike"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VXX2  171117C00009000"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"call"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"strike"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="err">...</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<p>Returns an array of option contracts by the specified expiration date and series. Parameters are:</p>
+
+<table><thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>Required. The root symbol.</td>
+</tr>
+<tr>
+<td>expiration</td>
+<td>Required. Contract expiration date, formatted as yyyy-mm-dd</td>
+</tr>
+<tr>
+<td>series</td>
+<td>Optional. By default the series is the same as the the root symbol</td>
+</tr>
+</tbody></table>
+<h1 id='errors'>Errors</h1>
+<p>We use standard HTTP codes to indicate the result of a request. Generally speaking, codes in <code>2xx</code> range indicate successful call, codes <code>4xx</code> indicate that the request failed with the information provided (authentication not accepted, parameters formatted incorrectly, a trade is not accepted) and codes <code>5xx</code> indicate internal server errors with no further explanation. The standard codes are clearly not enough, that is why the API can also respond with a json object with the following optional fields:</p>
+
+<table><thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>code</td>
+<td><code>not_found</code>, <code>validation_error</code>, <code>api_error</code></td>
+</tr>
+<tr>
+<td>message</td>
+<td>the error description</td>
+</tr>
+</tbody></table>
+<h3 id='http-status-codes'>HTTP Status Codes</h3>
+<table><thead>
+<tr>
+<th>code</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>200&nbsp;OK</td>
+<td>all good</td>
+</tr>
+<tr>
+<td>400&nbsp;BAD&nbsp;REQUEST</td>
+<td>the request is not accepted most likely due to formatting issues</td>
+</tr>
+<tr>
+<td>401&nbsp;UNAUTHORIZED</td>
+<td>authorization denied, access token is incorrect or revoked</td>
+</tr>
+<tr>
+<td>404&nbsp;NOT&nbsp;FOUND</td>
+<td>the requested resource is not found</td>
+</tr>
+<tr>
+<td>500&nbsp;SERVER&nbsp;ERROR</td>
+<td>internal server error, something on our end</td>
+</tr>
+</tbody></table>
+<h1 id='appendix'>Appendix</h1><h2 id='cms-symbols'>CMS symbols</h2>
+<p>The CMS convention is used to code stocks and ETFs. There is a space between the root and the suffix.</p>
+
+<blockquote>
+<p>As an example, the <strong>Bank of America warrant class A</strong> will be coded as <code>BAC WSA</code>, <strong>Berkshire Hathaway class B</strong> is coded as <code>BRK B</code></p>
+</blockquote>
+
+<table><thead>
+<tr>
+<th>Security Categorization</th>
+<th>CMS Suffix</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Preferred</td>
+<td>PR</td>
+</tr>
+<tr>
+<td>Preferred Class class A</td>
+<td>PRA</td>
+</tr>
+<tr>
+<td>Class “A”</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Preferred when distributed</td>
+<td>PRWD</td>
+</tr>
+<tr>
+<td>When distributed</td>
+<td>WD</td>
+</tr>
+<tr>
+<td>Warrants</td>
+<td>WS</td>
+</tr>
+<tr>
+<td>Warrants Class “A”</td>
+<td>WSA</td>
+</tr>
+<tr>
+<td>Called</td>
+<td>CL</td>
+</tr>
+<tr>
+<td>Class “A” Called</td>
+<td>ACL</td>
+</tr>
+<tr>
+<td>Preferred called</td>
+<td>PRCL</td>
+</tr>
+<tr>
+<td>Preferred “A” called</td>
+<td>PRACL</td>
+</tr>
+<tr>
+<td>Preferred “A” when issued</td>
+<td>PRAWI</td>
+</tr>
+<tr>
+<td>Emerging Company Marketplace</td>
+<td>EC</td>
+</tr>
+<tr>
+<td>Partial Paid</td>
+<td>PP</td>
+</tr>
+<tr>
+<td>Convertible</td>
+<td>CV</td>
+</tr>
+<tr>
+<td>Convertible called</td>
+<td>CVCL</td>
+</tr>
+<tr>
+<td>Class Convertible</td>
+<td>ACV</td>
+</tr>
+<tr>
+<td>Preferred (class A) Convertible</td>
+<td>PRACV</td>
+</tr>
+<tr>
+<td>Preferred (class A) when Distributed</td>
+<td>PRAWD</td>
+</tr>
+<tr>
+<td>Rights</td>
+<td>RT</td>
+</tr>
+<tr>
+<td>Units</td>
+<td>U</td>
+</tr>
+<tr>
+<td>When issued</td>
+<td>WI</td>
+</tr>
+<tr>
+<td>Rights when issued</td>
+<td>RTWI</td>
+</tr>
+<tr>
+<td>Preferred when issued</td>
+<td>PRWI</td>
+</tr>
+<tr>
+<td>Class &quot;A&quot; when issued</td>
+<td>AWI</td>
+</tr>
+<tr>
+<td>Warrrant when issued</td>
+<td>WSWI</td>
+</tr>
+</tbody></table>
+<h2 id='occ-symbols'>OCC symbols</h2>
+<blockquote>
+<p>For example, symbol <code>AAPL  171103C00155000</code> is translated to a call on AAPL expiring on November 3rd 2017, with its strike price of $155.00</p>
+</blockquote>
+
+<p>Option symbols are coded according to the OCC standard. The OCC option symbol consists of 4 parts:</p>
+
+<ul>
+<li>Root symbol of the underlying stock or ETF, padded with spaces to 6 characters</li>
+<li>Expiration date, 6 digits in the format yymmdd</li>
+<li>Option type, either P or C, for put or call</li>
+<li>Strike price, as the price x 1000, front padded with 0s to 8 digits</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">cURL</a>
+                <a href="#" data-language-name="cpp--mql">MQL5</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
